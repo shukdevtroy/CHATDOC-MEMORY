@@ -290,4 +290,5 @@ with gr.Blocks(title="Chat with Documents 💬 📚", theme=gr.themes.Ocean()) a
     )
 
 if __name__ == "__main__":  # Python idiom: only runs code below if script is executed directly (not imported as module)
-    demo.launch()  # Starts Gradio web server and opens app in browser; makes app accessible at local URL (e.g., http://127.0.0.1:7860)
+    ### demo.launch()  # Starts Gradio web server and opens app in browser; makes app accessible at local URL (e.g., http://127.0.0.1:7860)
+    demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860))) ### render purpose
