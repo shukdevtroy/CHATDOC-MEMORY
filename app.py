@@ -126,7 +126,7 @@ def save_conversation(api_key):  # Defines function that saves conversation to u
     
     try:  # Begins try block to handle file writing errors
         user_file = get_user_file(api_key)  # Generates unique filename based on user's API key (e.g., "conversations_abc123.json")
-        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")  # Gets current date/time and formats as string (e.g., "2026-01-14_15-30-45")
+        timestamp = datetime.now().strftime("%Y-%m-%d;%H:%M:%S")
         
         with open(user_file, "a") as f:  # Opens user's file in append mode ("a" means add to end without overwriting); auto-closes when done
             conv_data = {  # Creates dictionary to structure the conversation data
